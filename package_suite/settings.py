@@ -75,10 +75,21 @@ WSGI_APPLICATION = 'package_suite.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+     'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'coding986532/pms_system_mt_apps', 
+        'USER': 'coding986532',
+        'PASSWORD': 'v2_3xhgi_F68dNK4ErwijzwUp4Jrvtnf',
+
+        'HOST': 'db.bit.io',
+        'PORT': '5432',
+    },
+    '''
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
+    '''
 }
 
 
