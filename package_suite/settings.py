@@ -72,7 +72,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'package_suite.wsgi.application'
-
+# stupid ssl
+STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca.crt")
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -86,9 +87,8 @@ DATABASES = {
 
         'HOST': 'ep-tiny-silence-862243.us-east-2.aws.neon.tech',
         'PORT': '5432',
-      #  "OPTIONS": {
-      #      "CONNECTION_POOL_KWARGS": {"ssl_cert_reqs": None},
-      #  },
+'OPTIONS': {'sslmode': 'verify-full', 'ca': STUPID_SSL_CERT},
+
     },
 }
 
@@ -123,4 +123,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'admin/'
-STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca.crt")
+
