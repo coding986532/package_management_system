@@ -86,9 +86,9 @@ DATABASES = {
 
         'HOST': 'ep-tiny-silence-862243.us-east-2.aws.neon.tech',
         'PORT': '5432',
-        "OPTIONS": {
-            "CONNECTION_POOL_KWARGS": {"ssl_cert_reqs": None},
-        },
+      #  "OPTIONS": {
+      #      "CONNECTION_POOL_KWARGS": {"ssl_cert_reqs": None},
+      #  },
     },
 }
 
