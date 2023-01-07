@@ -72,22 +72,24 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'package_suite.wsgi.application'
-
-
+# stupid ssl
+STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca1.pem")
+# Fo5N8eSjVDcODf6MFnBBhQ
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+
+
 DATABASES = {
-     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'neondb', 
-        'USER': 'user',
-        'PASSWORD': 'DsiAZUBx36at',
-
-        'HOST': 'ep-tiny-silence-862243.us-east-2.aws.neon.tech',
-        'PORT': '5432',
-    },
-
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'NAME': 'neondb',
+    'USER': 'coding42654',
+    'PASSWORD': '61mkrJXcopAy',
+    'HOST': 'ep-round-fog-478484.us-east-2.aws.neon.tech',
+    'PORT': '5432',
+    'OPTIONS': {'sslmode': 'verify-full', 'sslrootcert': STUPID_SSL_CERT },
+  }
 }
 
 
@@ -121,3 +123,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'admin/'
+
