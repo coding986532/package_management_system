@@ -80,11 +80,11 @@ WSGI_APPLICATION = 'package_suite.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'coding986532/pms_system_mt_apps', 
-        'USER': 'coding986532',
-        'PASSWORD': 'v2_3xhgi_F68dNK4ErwijzwUp4Jrvtnf',
+        'NAME': 'neondb', 
+        'USER': 'user',
+        'PASSWORD': 'DsiAZUBx36at',
 
-        'HOST': 'db.bit.io',
+        'HOST': 'ep-tiny-silence-862243.us-east-2.aws.neon.tech',
         'PORT': '5432',
     },
 
