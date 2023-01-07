@@ -123,3 +123,4 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_URL = 'admin/'
+STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca.crt")
