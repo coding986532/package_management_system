@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-r*pkgo%!o8ro$19((x86bq*(j0v5d5d94#u+02(#^601lh045o
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-CSRF_TRUSTED_ORIGINS = ['https://*.adaptable.app','*']
+CSRF_TRUSTED_ORIGINS = ['https://*.adaptable.app']
 ALLOWED_HOSTS = ['*']
 
 
@@ -74,7 +74,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'package_suite.wsgi.application'
 # stupid ssl
 STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca.crt")
-
+# Fo5N8eSjVDcODf6MFnBBhQ
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
@@ -87,7 +87,7 @@ DATABASES = {
 
         'HOST': 'ep-tiny-silence-862243.us-east-2.aws.neon.tech',
         'PORT': '5432',
-'OPTIONS': {'sslmode': 'verify-full', 'ca': STUPID_SSL_CERT},
+'OPTIONS': {'sslmode': 'require', },
 
     },
 }
