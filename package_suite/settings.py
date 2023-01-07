@@ -73,7 +73,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'package_suite.wsgi.application'
 # stupid ssl
-STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca.crt")
+STUPID_SSL_CERT = os.path.join(BASE_DIR,"ca1.pem")
 # Fo5N8eSjVDcODf6MFnBBhQ
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
@@ -87,7 +87,7 @@ DATABASES = {
 
         'HOST': 'ep-tiny-silence-862243.us-east-2.aws.neon.tech',
         'PORT': '5432',
-'OPTIONS': {'sslmode': 'require', },
+'OPTIONS': {'sslmode': 'verify-full', 'sslrootcert': STUPID_SSL_CERT },
 
     },
 }
